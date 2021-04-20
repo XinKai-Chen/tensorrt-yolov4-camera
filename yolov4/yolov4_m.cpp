@@ -742,7 +742,7 @@ int main(int argc, char** argv) {
         //在显示界面上添加FPS值
         std::string FPS_text = "FPS : " + std::to_string(fps);
         cv::putText(outPut, FPS_text, cv::Point(0, 25), cv::FONT_HERSHEY_TRIPLEX, 1.2, cv::Scalar(0, 0, 0), 2);
-        if(cv::waitKey(27) >= 0)//esc键退出
+        if(cv::waitKey(30) == 0)//esc键退出
             break;
         cv::imshow("YOLOv4 Object Detection Window", outPut);
     }
